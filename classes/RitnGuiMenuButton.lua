@@ -1,4 +1,4 @@
--- RitnGuiMenu
+-- RitnGuiMenuButton
 ----------------------------------------------------------------
 local class = require(ritnlib.defines.class.core)
 local modGui = require("mod-gui")
@@ -12,9 +12,9 @@ local flib = require(ritnlib.defines.menu.gui.menu)
 ----------------------------------------------------------------
 --- CLASSE DEFINES
 ----------------------------------------------------------------
-local RitnGuiMenu = class.newclass(libGui, function(base, event)
+local RitnGuiMenuButton = class.newclass(libGui, function(base, event)
     libGui.init(base, event, ritnlib.defines.menu.name, "button-menu")
-    base.object_name = "RitnGuiMenu"
+    base.object_name = "RitnGuiMenuButton"
     --------------------------------------------------
     base.gui_name = "ritn"
     --------------------------------------------------
@@ -27,7 +27,7 @@ end)
 ----------------------------------------------------------------
 
 
-function RitnGuiMenu:create()
+function RitnGuiMenuButton:create()
     if self.gui[1][self.gui_name.."-"..self.main_gui] then return self end
 
     local element = flib.getElement(self.gui_name)
@@ -43,11 +43,11 @@ function RitnGuiMenu:create()
     return self
 end
 
-function RitnGuiMenu:destroy()
+function RitnGuiMenuButton:destroy()
     if self.gui[1][self.gui_name.."-"..self.main_gui] == nil then return self end
 
     self.gui[1][self.gui_name.."-"..self.main_gui].destroy()
 end
 
 ----------------------------------------------------------------
-return RitnGuiMenu
+return RitnGuiMenuButton

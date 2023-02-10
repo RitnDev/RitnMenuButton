@@ -3,12 +3,6 @@
 
 
 local menu_interface = {
-    ["gui_action_ritn"] = function(action, ...)
-        if action == ritnlib.defines.menu.gui_actions.menu.active then 
-            global.menu.gui.actions.ritn.active(...)
-        end
-    end,
-
     ["disable.module.player"] = function()
         global.menu.modules.player = false
     end,

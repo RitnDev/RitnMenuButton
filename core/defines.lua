@@ -16,7 +16,7 @@ defines.directory = dir
 
 -- classes
 defines.class = {
-    guiButtonMenu = dir .. ".classes.RitnGuiMenu",
+    guiButtonMenu = dir .. ".classes.RitnGuiMenuButton",
     guiCommon = dir .. ".classes.RitnGuiCommon",
 }
 
