@@ -7,6 +7,7 @@ local events = {}
 -------------------------------------------
 -- INIT GLOBAL MOD
 -------------------------------------------
+if not global.menu then
 global.menu = { 
     modules = {
         player = true,
@@ -18,5 +19,6 @@ global.menu = {
     }
 
 }
+end
 -------------------------------------------
 return events
