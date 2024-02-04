@@ -1,7 +1,7 @@
 -----------------------------------------
 --               DEFINES               --
 -----------------------------------------
-if not ritnlib then ritnlib = { defines={} } end
+if not ritnlib then require("__RitnCoreGame__.core.defines") end
 local name = "RitnMenuButton"
 local dir = "__".. name .."__"
 local directory = dir .. "."
@@ -24,6 +24,7 @@ defines.class = {
 -- Modules
 defines.modules = {
     core = dir .. ".core.modules",
+    globals = dir .. ".modules.globals",
     events = dir .. ".modules.events",
     ----
     player = dir .. ".modules.player",
