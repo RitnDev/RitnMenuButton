@@ -17,6 +17,7 @@ local RitnGuiMenuButton = class.newclass(libGui, function(base, event)
     base.object_name = "RitnGuiMenuButton"
     --------------------------------------------------
     base.gui_name = "ritn"
+    base.visible = settings.get_player_settings(base.player)[ritnlib.defines.menu.settings.enable_main_button.name].value
     --------------------------------------------------
     base.gui = { modGui.get_button_flow(base.player) }
     --------------------------------------------------
@@ -29,6 +30,7 @@ end)
 
 function RitnGuiMenuButton:create()
     if self.gui[1][self.gui_name.."-"..self.main_gui] then return self end
+    if self.visible == false then return self end
 
     local element = flib.getElement(self.gui_name)
 

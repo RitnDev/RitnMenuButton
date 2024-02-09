@@ -77,20 +77,17 @@ defines.prefix = {
 local settings_prefix = defines.prefix.name .. defines.prefix.mod
 defines.settings = {
     enable_main_button = {
-        name = settings_prefix .. "toggle-main-button",
+        name = settings_prefix .. "enable-main-button",
         value = true,
     }
 }
-
-
-defines.name_prefix = "ritnmods-"
 
 
 -- Name and value
 defines.names = {
     
     customInput = {
-        toggle_main_menu = defines.name_prefix .. "toggle-main-menu",
+        toggle_main_menu = defines.prefix.name .. "toggle-main-menu",
     },
 
     --GUI STYLES
