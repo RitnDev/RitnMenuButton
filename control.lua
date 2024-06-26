@@ -1,7 +1,6 @@
 -- Initialisation des variables globals
-if not ritnlib then require("__RitnLib__/defines") end
-require("__RitnCoreGame__.core.defines")
-require("__RitnMenuButton__.core.defines")
+require("core.defines")
+require("core.setup-classes")
 -- Activation de gvv s'il est présent
 if script.active_mods["gvv"] then require(ritnlib.defines.gvv)() end
 -- envoie des modules à l'event listener :

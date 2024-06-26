@@ -1,27 +1,21 @@
 -- RitnGuiMenuButton
 ----------------------------------------------------------------
-local class = require(ritnlib.defines.class.core)
 local modGui = require("mod-gui")
-local libGui = require(ritnlib.defines.class.luaClass.gui)
 ----------------------------------------------------------------
 local flib = require(ritnlib.defines.menu.gui.menu)
 ----------------------------------------------------------------
-
-
-
-----------------------------------------------------------------
 --- CLASSE DEFINES
 ----------------------------------------------------------------
-local RitnGuiMenuButton = class.newclass(libGui, function(base, event)
-    libGui.init(base, event, ritnlib.defines.menu.name, "button-menu")
-    base.object_name = "RitnGuiMenuButton"
+RitnGuiMenuButton = ritnlib.classFactory.newclass(RitnLibGui, function(self, event)
+    RitnLibGui.init(self, event, ritnlib.defines.menu.name, "button-menu")
+    self.object_name = "RitnGuiMenuButton"
     --------------------------------------------------
-    base.gui_name = "ritn"
-    base.visible = settings.get_player_settings(base.player)[ritnlib.defines.menu.settings.enable_main_button.name].value
+    self.gui_name = "ritn"
+    self.visible = settings.get_player_settings(self.player)[ritnlib.defines.menu.settings.enable_main_button.name].value
     --------------------------------------------------
-    base.gui = { modGui.get_button_flow(base.player) }
+    self.gui = { modGui.get_button_flow(self.player) }
     --------------------------------------------------
-    base.content = flib.getContent()
+    self.content = flib.getContent()
     --------------------------------------------------
 end)
 
@@ -52,4 +46,4 @@ function RitnGuiMenuButton:destroy()
 end
 
 ----------------------------------------------------------------
-return RitnGuiMenuButton
+--return RitnGuiMenuButton

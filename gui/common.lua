@@ -1,10 +1,8 @@
-local libGuiElement = require(ritnlib.defines.class.gui.element)
-
 
 local element = {
     flow = {
-        main = libGuiElement("common","flow","main"):vertical():get(),
-        menu = libGuiElement("common","flow","menu"):horizontal():get(),
+        main = RitnLibGuiElement("common","flow","main"):vertical():get(),
+        menu = RitnLibGuiElement("common","flow","menu"):horizontal():get(),
     }
 }
 

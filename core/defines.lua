@@ -20,6 +20,10 @@ defines.class = {
     guiCommon = dir .. ".classes.RitnGuiCommon",
 }
 
+-- setup-classes
+defines.setup = dir .. ".core.setup-classes"
+
+
 
 -- Modules
 defines.modules = {
