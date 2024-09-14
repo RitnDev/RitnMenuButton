@@ -4,7 +4,7 @@ local RitnStyle = require(ritnlib.defines.class.prototype.style)
 -------------------------------------------------------------------------------
 
 -- STYLES
-RitnStyle():extendButton(ritnlib.defines.menu.names.styles.button_menu, "button")
+RitnStyle():extendButton(ritnlib.defines.menu.names.styles.button_menu, "slot_button")
 
 
 -- SPRITES

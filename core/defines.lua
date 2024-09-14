@@ -41,7 +41,8 @@ local graphics = dir .. "/graphics/"
 local gui = graphics .. "gui/"
 defines.graphics = {
     gui = {
-        button_menu = gui .. "button-main-menu.png",
+        --button_menu = gui .. "button-main-menu.png",
+        button_menu = gui .. "button-main-menu-white.png",
     },
 }
 
