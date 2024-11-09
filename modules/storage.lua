@@ -1,15 +1,15 @@
 ---------------------------------------------------------------------------------------------
 -- GLOBALS
 ---------------------------------------------------------------------------------------------
-if global.menu == nil then
-    global.menu = { 
+if storage.menu == nil then
+    storage.menu = { 
         modules = {
             player = true,
         },
         gui = {
             actions = {},
             common = require(ritnlib.defines.menu.gui.common),
-            menu = require(ritnlib.defines.menu.gui.menu)
+            --menu = require(ritnlib.defines.menu.gui.menu)
         }
     }
 end
@@ -19,21 +19,21 @@ end
 ---------------------------------------------------------------------------------------------
 local menu_interface = {
     ["disable.module.player"] = function()
-        global.menu.modules.player = false
+        storage.menu.modules.player = false
     end,
 
     ["get_gui_common"] = function()
-        return global.menu.gui.common
+        return storage.menu.gui.common
     end,
     ["set_gui_common"] = function(gui_common)
-        global.menu.gui.common = gui_common
+        storage.menu.gui.common = gui_common
     end,
 
     ["add_actions"] = function(gui_name, actions)
-        global.menu.gui.actions[gui_name] = actions
+        storage.menu.gui.actions[gui_name] = actions
     end,
     ["set_action.menu"] = function(actions)
-        global.menu.gui.actions.menu = actions
+        storage.menu.gui.actions.menu = actions
     end,
 
     ["create_common_gui"] = function(gui_start, elements) 

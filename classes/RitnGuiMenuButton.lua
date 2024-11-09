@@ -35,7 +35,7 @@ function RitnGuiMenuButton:create()
     
     -- Main Button Menu
     content.button.menu =       self.gui[1].add(element.button.menu)
- 
+
     return self
 end
 

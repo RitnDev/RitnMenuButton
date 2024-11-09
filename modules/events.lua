@@ -5,7 +5,9 @@ local function on_init_mod()
     return
 end
 -------------------------------------------
--- event : on_init
-script.on_init(on_init_mod)
+local module = { events = {}}
 -------------------------------------------
-return {}
+-- event : on_init_mod
+module.on_init = on_init_mod
+-------------------------------------------
+return module

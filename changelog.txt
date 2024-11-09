@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 03.11.2024
+  Changes:
+    - Passage en 2.0.
+    - Variables "global" -> "storage".
+  Fixes:
+    - core.lualib.event_handler : on_init
+    - fix: RitnMenuButton::on_save() à cause des fonctions enregistrées dans storage.
+---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 14.09.2024
   Changes:

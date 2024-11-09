@@ -3,8 +3,7 @@
 
 
 local function on_player_created(e)
-    if global.menu.modules.player == false then return end 
-    log('> event : '.. game.table_to_json(e))
+    if storage.menu.modules.player == false then return end 
     RitnMenuGuiCommon(e):create()
 end
 

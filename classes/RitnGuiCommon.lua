@@ -24,7 +24,7 @@ function RitnMenuGuiCommon:create()
     
     local elements = remote.call("RitnMenuButton", "get_gui_common").elements
     remote.call("RitnMenuButton", "create_common_gui", self.gui[1], elements)
- 
+
     return self
 end
 
